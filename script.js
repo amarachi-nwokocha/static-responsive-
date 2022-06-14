@@ -11,8 +11,8 @@ function dailyData() {
     .then((data) => {
       data.forEach((e, i) => {
         console.log(e.timeframes.daily.current);
-        hours[i].innerHTML = e.timeframes.daily.current;
-        lastTime[i].innerHTML = e.timeframes.daily.previous;
+        hours[i].innerHTML = e.timeframes.daily.current + "hrs";
+        lastTime[i].innerHTML = "Last Week -" + e.timeframes.daily.previous;
       });
     });
 }
@@ -26,8 +26,8 @@ function weeklyData() {
     .then((data) => {
       data.forEach((e, i) => {
         console.log(e.timeframes.weekly.current);
-        hours[i].innerHTML = e.timeframes.weekly.current;
-        lastTime[i].innerHTML = e.timeframes.weekly.previous;
+        hours[i].innerHTML = e.timeframes.weekly.current + "hrs" ;
+        lastTime[i].innerHTML = "Last Week -" + e.timeframes.weekly.previous;
       });
     });
 }
@@ -44,8 +44,8 @@ function monthlyData() {
     .then((data) => {
       data.forEach((e, i) => {
         console.log(e.timeframes.monthly.current);
-        hours[i].innerHTML = e.timeframes.monthly.current;
-        lastTime[i].innerHTML = e.timeframes.monthly.previous;
+        hours[i].innerHTML = e.timeframes.monthly.current + "hrs";
+        lastTime[i].innerHTML ="Last Week -" + e.timeframes.monthly.previous;
       });
     });
 }
